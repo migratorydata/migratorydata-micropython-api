@@ -2,10 +2,6 @@
     "urls": [
       ["migratorydata/__init__.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/__init__.py"],
       ["migratorydata/migratorydata_client.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_client.py"],
-      ["migratorydata/migratorydata_listener.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_listener.py"],
-      ["migratorydata/migratorydata_log_level.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_log_level.py"],
-      ["migratorydata/migratorydata_log_listener.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_log_listener.py"],
-      ["migratorydata/migratorydata_message.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_message.py"],
 
       ["migratorydata/core/__init__.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/__init__.py"],
       ["migratorydata/core/client_impl.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/client_impl.py"],

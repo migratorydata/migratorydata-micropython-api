@@ -1,72 +1,72 @@
 _A=None
-from migratorydata.protocol.push_protocol import *
-from migratorydata.protocol.message import vYC
-from migratorydata.protocol.codec import gnU,Crr
-class NgC:
+from ..protocol.push_protocol import *
+from ..protocol.message import TeB
+from ..protocol.codec import GyL,Kxp
+class JIJ:
 	@staticmethod
-	def Pff(vrD,logger):
-		tBo=vrD.Fvx
-		if vrD.yKx[tBo]==72:tBo=NgC.FHW(vrD)
-		if tBo==-1:return[]
-		vrD.vdE(tBo);OFn=[]
+	def ZMw(lCc,logger):
+		dKP=lCc.KeQ
+		if lCc.zpO[dKP]==72:dKP=JIJ.Rlp(lCc)
+		if dKP==-1:return[]
+		lCc.DOX(dKP);blF=[]
 		while True:
-			if tBo>=len(vrD.yKx):return OFn
-			if vrD.yKx[tBo]==msU.uiM:tBo+=1
+			if dKP>=len(lCc.zpO):return blF
+			if lCc.zpO[dKP]==VWl.ZAf:dKP+=1
 			else:
-				try:HJU=gnU.zsy(vrD,tBo)
-				except IndexError:HJU=Crr(-1,-1)
-				bWw=HJU.IMd();daR=HJU.IGC()
-				if bWw==-1:return OFn
+				try:lkX=GyL.jxp(lCc,dKP)
+				except IndexError:lkX=Kxp(-1,-1)
+				IDw=lkX.DPA();exL=lkX.Cls()
+				if IDw==-1:return blF
 				while True:
-					tdG=NgC.jZp(vrD,bWw,daR,msU.Ydq)
-					if tdG==-1:break
-					axu=NgC.KaF(vrD,bWw+1,tdG,logger)
-					if axu is not _A:message=vYC(msU.XJr[vrD.yKx[bWw]],axu);OFn.append(message)
-					bWw=tdG+1;vrD.vdE(bWw)
-				tBo=vrD.Fvx
+					ocg=JIJ.nlz(lCc,IDw,exL,VWl.ciG)
+					if ocg==-1:break
+					xZU=JIJ.qaT(lCc,IDw+1,ocg,logger)
+					if xZU is not _A:message=TeB(VWl.OiN[lCc.zpO[IDw]],xZU);blF.append(message)
+					IDw=ocg+1;lCc.DOX(IDw)
+				dKP=lCc.KeQ
 	@staticmethod
-	def FHW(vrD):
-		Ckh='\r\n\r\n'.encode('utf-8');Fvx=vrD.Fvx;tdG=NgC.search(vrD.yKx[Fvx:],len(vrD.yKx),Ckh,len(Ckh))
-		if tdG==-1:return-1
-		Fvx=tdG+len(Ckh);return Fvx
+	def Rlp(lCc):
+		FxF='\r\n\r\n'.encode('utf-8');KeQ=lCc.KeQ;ocg=JIJ.search(lCc.zpO[KeQ:],len(lCc.zpO),FxF,len(FxF))
+		if ocg==-1:return-1
+		KeQ=ocg+len(FxF);return KeQ
 	@staticmethod
-	def jZp(vrD,start,end,value):
-		for tdG in range(start,end):
-			if vrD.yKx[tdG]==value:return tdG
+	def nlz(lCc,start,end,value):
+		for ocg in range(start,end):
+			if lCc.zpO[ocg]==value:return ocg
 		return-1
 	@staticmethod
-	def KaF(vrD,start,end,logger):
-		axu=_A
+	def qaT(lCc,start,end,logger):
+		xZU=_A
 		while True:
 			if start>=end:break
-			Vhq=vrD.yKx[start];SZk=NgC.jZp(vrD,start+1,end,msU.max)
-			if SZk==-1:logger.trace('Received an invalid msg: Hdr end missing - msg ignored, Hdr Position: '+str(start)+', '+str(vrD.yKx[start:end]));return _A
-			vDO=msU.vWP(Vhq)
-			if vDO is _A:logger.trace('Received an unknown Hdr - Hdr ignored, Hdr Position: '+str(vrD.yKx));start=SZk+1
+			Mlk=lCc.zpO[start];SgZ=JIJ.nlz(lCc,start+1,end,VWl.FAa)
+			if SgZ==-1:logger.trace('Received an invalid msg: Hdr end missing - msg ignored, Hdr Position: '+str(start)+', '+str(lCc.zpO[start:end]));return _A
+			KRs=VWl.NHk(Mlk)
+			if KRs is _A:logger.trace('Received an unknown Hdr - Hdr ignored, Hdr Position: '+str(lCc.zpO));start=SgZ+1
 			start=start+1
-			if axu is _A:axu={}
-			value=_A;vzm=msU.Ikw(vDO);MDn=vrD.yKx[start:SZk]
-			if vzm==xpp.Xkq:value=msU.KEz(MDn)
-			elif vzm==xpp.Pfy:Rwq=msU.fLt(MDn);value=Rwq.decode('utf-8')
-			elif vzm==xpp.eFH:value=msU.fLt(MDn)
-			elif vzm==xpp.ZKD:value=MDn
-			hwP=axu.get(vDO)
-			if hwP is _A:axu[vDO]=value
-			else:values=[hwP,value];axu[vDO]=values
-			start=SZk+1
-		return axu
+			if xZU is _A:xZU={}
+			value=_A;AQM=VWl.Paj(KRs);hKU=lCc.zpO[start:SgZ]
+			if AQM==Xiz.dHF:value=VWl.kfG(hKU)
+			elif AQM==Xiz.JnR:KkL=VWl.TFM(hKU);value=KkL.decode('utf-8')
+			elif AQM==Xiz.Lwg:value=VWl.TFM(hKU)
+			elif AQM==Xiz.gLu:value=hKU
+			rjH=xZU.get(KRs)
+			if rjH is _A:xZU[KRs]=value
+			else:values=[rjH,value];xZU[KRs]=values
+			start=SgZ+1
+		return xZU
 	@staticmethod
-	def search(PrM,dataLength,pattern,patternLength):
-		SoJ=[0]*patternLength;dji=0;len=0;tdG=1
-		while tdG<patternLength:
-			if pattern[tdG]==pattern[len]:len+=1;SoJ[tdG]=len;tdG+=1
-			elif len!=0:len=SoJ[len-1]
-			else:SoJ[tdG]=0;tdG+=1
-		tdG=0
-		while tdG<dataLength:
-			if pattern[dji]==PrM[tdG]:tdG+=1;dji+=1
-			if dji==patternLength:return tdG-dji
-			elif tdG<dataLength and pattern[dji]!=PrM[tdG]:
-				if dji!=0:dji=SoJ[dji-1]
-				else:tdG+=1
+	def search(yvg,dataLength,pattern,patternLength):
+		WSf=[0]*patternLength;DeY=0;len=0;ocg=1
+		while ocg<patternLength:
+			if pattern[ocg]==pattern[len]:len+=1;WSf[ocg]=len;ocg+=1
+			elif len!=0:len=WSf[len-1]
+			else:WSf[ocg]=0;ocg+=1
+		ocg=0
+		while ocg<dataLength:
+			if pattern[DeY]==yvg[ocg]:ocg+=1;DeY+=1
+			if DeY==patternLength:return ocg-DeY
+			elif ocg<dataLength and pattern[DeY]!=yvg[ocg]:
+				if DeY!=0:DeY=WSf[DeY-1]
+				else:ocg+=1
 		return-1
