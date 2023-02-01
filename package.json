@@ -1,0 +1,28 @@
+{
+    "urls": [
+      ["migratorydata/__init__.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/__init__.py"],
+      ["migratorydata/migratorydata_client.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_client.py"],
+      ["migratorydata/migratorydata_listener.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_listener.py"],
+      ["migratorydata/migratorydata_log_level.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_log_level.py"],
+      ["migratorydata/migratorydata_log_listener.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_log_listener.py"],
+      ["migratorydata/migratorydata_message.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/migratorydata_message.py"],
+
+      ["migratorydata/core/__init__.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/__init__.py"],
+      ["migratorydata/core/client_impl.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/client_impl.py"],
+      ["migratorydata/core/connection.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/connection.py"],
+      ["migratorydata/core/network.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/network.py"],
+      ["migratorydata/core/parse.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/parse.py"],
+      ["migratorydata/core/subject.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/subject.py"],
+      ["migratorydata/core/util.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/util.py"],
+      ["migratorydata/core/io.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/io.py"],
+      ["migratorydata/core/logger.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/core/logger.py"],
+
+      ["migratorydata/protocol/__init__.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/protocol/__init__.py"],
+      ["migratorydata/protocol/codec.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/protocol/codec.py"],
+      ["migratorydata/protocol/message.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/protocol/message.py"],
+      ["migratorydata/protocol/push_protocol.py", "github:migratorydata/migratorydata-micropython-api/migratorydata/protocol/push_protocol.py"]
+    ],
+    "deps": [
+    ],
+    "version": "6.0"
+  }
