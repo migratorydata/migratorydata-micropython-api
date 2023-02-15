@@ -1,72 +1,72 @@
 _A=None
 from ..protocol.push_protocol import *
-from ..protocol.message import TeB
-from ..protocol.codec import GyL,Kxp
-class JIJ:
+from ..protocol.message import hbd
+from ..protocol.codec import JqV,AVP
+class zSm:
 	@staticmethod
-	def ZMw(lCc,logger):
-		dKP=lCc.KeQ
-		if lCc.zpO[dKP]==72:dKP=JIJ.Rlp(lCc)
-		if dKP==-1:return[]
-		lCc.DOX(dKP);blF=[]
+	def LZV(tzo,logger):
+		PsX=tzo.PKd
+		if tzo.Htg[PsX]==72:PsX=zSm.rtR(tzo)
+		if PsX==-1:return[]
+		tzo.xgh(PsX);GCd=[]
 		while True:
-			if dKP>=len(lCc.zpO):return blF
-			if lCc.zpO[dKP]==VWl.ZAf:dKP+=1
+			if PsX>=len(tzo.Htg):return GCd
+			if tzo.Htg[PsX]==rCj.ibi:PsX+=1
 			else:
-				try:lkX=GyL.jxp(lCc,dKP)
-				except IndexError:lkX=Kxp(-1,-1)
-				IDw=lkX.DPA();exL=lkX.Cls()
-				if IDw==-1:return blF
+				try:vRh=JqV.Ksz(tzo,PsX)
+				except IndexError:vRh=AVP(-1,-1)
+				XCi=vRh.DUb();kCh=vRh.zsL()
+				if XCi==-1:return GCd
 				while True:
-					ocg=JIJ.nlz(lCc,IDw,exL,VWl.ciG)
-					if ocg==-1:break
-					xZU=JIJ.qaT(lCc,IDw+1,ocg,logger)
-					if xZU is not _A:message=TeB(VWl.OiN[lCc.zpO[IDw]],xZU);blF.append(message)
-					IDw=ocg+1;lCc.DOX(IDw)
-				dKP=lCc.KeQ
+					sEb=zSm.IrL(tzo,XCi,kCh,rCj.czT)
+					if sEb==-1:break
+					wst=zSm.JEm(tzo,XCi+1,sEb,logger)
+					if wst is not _A:message=hbd(rCj.HhG[tzo.Htg[XCi]],wst);GCd.append(message)
+					XCi=sEb+1;tzo.xgh(XCi)
+				PsX=tzo.PKd
 	@staticmethod
-	def Rlp(lCc):
-		FxF='\r\n\r\n'.encode('utf-8');KeQ=lCc.KeQ;ocg=JIJ.search(lCc.zpO[KeQ:],len(lCc.zpO),FxF,len(FxF))
-		if ocg==-1:return-1
-		KeQ=ocg+len(FxF);return KeQ
+	def rtR(tzo):
+		NCA='\r\n\r\n'.encode('utf-8');PKd=tzo.PKd;sEb=zSm.search(tzo.Htg[PKd:],len(tzo.Htg),NCA,len(NCA))
+		if sEb==-1:return-1
+		PKd=sEb+len(NCA);return PKd
 	@staticmethod
-	def nlz(lCc,start,end,value):
-		for ocg in range(start,end):
-			if lCc.zpO[ocg]==value:return ocg
+	def IrL(tzo,start,end,value):
+		for sEb in range(start,end):
+			if tzo.Htg[sEb]==value:return sEb
 		return-1
 	@staticmethod
-	def qaT(lCc,start,end,logger):
-		xZU=_A
+	def JEm(tzo,start,end,logger):
+		wst=_A
 		while True:
 			if start>=end:break
-			Mlk=lCc.zpO[start];SgZ=JIJ.nlz(lCc,start+1,end,VWl.FAa)
-			if SgZ==-1:logger.trace('Received an invalid msg: Hdr end missing - msg ignored, Hdr Position: '+str(start)+', '+str(lCc.zpO[start:end]));return _A
-			KRs=VWl.NHk(Mlk)
-			if KRs is _A:logger.trace('Received an unknown Hdr - Hdr ignored, Hdr Position: '+str(lCc.zpO));start=SgZ+1
+			YOy=tzo.Htg[start];jmc=zSm.IrL(tzo,start+1,end,rCj.CUW)
+			if jmc==-1:logger.trace('Received an invalid msg: Hdr end missing - msg ignored, Hdr Position: '+str(start)+', '+str(tzo.Htg[start:end]));return _A
+			raH=rCj.Jyr(YOy)
+			if raH is _A:logger.trace('Received an unknown Hdr - Hdr ignored, Hdr Position: '+str(tzo.Htg));start=jmc+1
 			start=start+1
-			if xZU is _A:xZU={}
-			value=_A;AQM=VWl.Paj(KRs);hKU=lCc.zpO[start:SgZ]
-			if AQM==Xiz.dHF:value=VWl.kfG(hKU)
-			elif AQM==Xiz.JnR:KkL=VWl.TFM(hKU);value=KkL.decode('utf-8')
-			elif AQM==Xiz.Lwg:value=VWl.TFM(hKU)
-			elif AQM==Xiz.gLu:value=hKU
-			rjH=xZU.get(KRs)
-			if rjH is _A:xZU[KRs]=value
-			else:values=[rjH,value];xZU[KRs]=values
-			start=SgZ+1
-		return xZU
+			if wst is _A:wst={}
+			value=_A;HXJ=rCj.nND(raH);ptV=tzo.Htg[start:jmc]
+			if HXJ==UxH.UOC:value=rCj.vzf(ptV)
+			elif HXJ==UxH.gBo:bVu=rCj.VhM(ptV);value=bVu.decode('utf-8')
+			elif HXJ==UxH.Rld:value=rCj.VhM(ptV)
+			elif HXJ==UxH.shb:value=ptV
+			VmB=wst.get(raH)
+			if VmB is _A:wst[raH]=value
+			else:values=[VmB,value];wst[raH]=values
+			start=jmc+1
+		return wst
 	@staticmethod
-	def search(yvg,dataLength,pattern,patternLength):
-		WSf=[0]*patternLength;DeY=0;len=0;ocg=1
-		while ocg<patternLength:
-			if pattern[ocg]==pattern[len]:len+=1;WSf[ocg]=len;ocg+=1
-			elif len!=0:len=WSf[len-1]
-			else:WSf[ocg]=0;ocg+=1
-		ocg=0
-		while ocg<dataLength:
-			if pattern[DeY]==yvg[ocg]:ocg+=1;DeY+=1
-			if DeY==patternLength:return ocg-DeY
-			elif ocg<dataLength and pattern[DeY]!=yvg[ocg]:
-				if DeY!=0:DeY=WSf[DeY-1]
-				else:ocg+=1
+	def search(bDQ,dataLength,pattern,patternLength):
+		ngV=[0]*patternLength;qny=0;len=0;sEb=1
+		while sEb<patternLength:
+			if pattern[sEb]==pattern[len]:len+=1;ngV[sEb]=len;sEb+=1
+			elif len!=0:len=ngV[len-1]
+			else:ngV[sEb]=0;sEb+=1
+		sEb=0
+		while sEb<dataLength:
+			if pattern[qny]==bDQ[sEb]:sEb+=1;qny+=1
+			if qny==patternLength:return sEb-qny
+			elif sEb<dataLength and pattern[qny]!=bDQ[sEb]:
+				if qny!=0:qny=ngV[qny-1]
+				else:sEb+=1
 		return-1

@@ -1,72 +1,72 @@
 import struct
-class VWl:
-	zHz=[];OdB=[];zXe=[];kFC=[];ZAf=25;ciG=127;FAa=30;DHr=31;OiN=[];xZU=[];ZNi=[]
+class rCj:
+	wGL=[];hgC=[];BAv=[];flN=[];ibi=25;czT=127;CUW=30;Jik=31;HhG=[];wst=[];mct=[]
 	@staticmethod
-	def oIC():
-		for B in range(0,128):VWl.zHz.append(-1)
-		VWl.zHz[yZW.aoD]=1;VWl.zHz[yZW.Apn]=2;VWl.zHz[yZW.TTE]=3;VWl.zHz[yZW.EOC]=4;VWl.zHz[yZW.XZj]=5;VWl.zHz[yZW.ClT]=6;VWl.zHz[yZW.Qlz]=8;VWl.zHz[yZW.oWs]=9;VWl.zHz[yZW.FRc]=12;VWl.zHz[yZW.beJ]=16;VWl.zHz[yZW.CLIENT_PUBLISH_RESPONSE]=19;VWl.zHz[yZW.wFt]=26;VWl.zHz[yZW.BCa]=7;VWl.zHz[yZW.KZZ]=11
-		for B in range(0,128):VWl.OiN.append(-1)
-		for A in range(0,yZW.KZZ+1):VWl.OiN[VWl.kNt(A)]=A
-		for B in range(0,128):VWl.OdB.append(-1)
-		VWl.OdB[ssB.inO]=1;VWl.OdB[ssB.OMZ]=2;VWl.OdB[ssB.Xdm]=3;VWl.OdB[ssB.mmS]=4;VWl.OdB[ssB.vli]=5;VWl.OdB[ssB.VdX]=6;VWl.OdB[ssB.UFY]=7;VWl.OdB[ssB.WHO]=8;VWl.OdB[ssB.QUT]=9;VWl.OdB[ssB.ERROR]=11;VWl.OdB[ssB.DXs]=12;VWl.OdB[ssB.RiS]=15;VWl.OdB[ssB.ulT]=16;VWl.OdB[ssB.aOE]=17;VWl.OdB[ssB.VTl]=18;VWl.OdB[ssB.eAm]=19;VWl.OdB[ssB.zXS]=20;VWl.OdB[ssB.zSb]=21;VWl.OdB[ssB.ykt]=22;VWl.OdB[ssB.wsX]=23;VWl.OdB[ssB.lWK]=24;VWl.OdB[ssB.XBf]=26;VWl.OdB[ssB.LSA]=32;VWl.OdB[ssB.GzR]=39;VWl.OdB[ssB.fmO]=40;VWl.OdB[ssB.Vxz]=35;VWl.OdB[ssB.cxQ]=36;VWl.OdB[ssB.yQX]=37;VWl.OdB[ssB.AKb]=44;VWl.OdB[ssB.DoJ]=45;VWl.OdB[ssB.obh]=46;VWl.OdB[ssB.UQb]=47;VWl.OdB[ssB.abu]=48;VWl.OdB[ssB.aMX]=29;VWl.OdB[ssB.PTc]=38
-		for B in range(0,128):VWl.xZU.append(-1)
-		for A in range(0,ssB.PTc+1):VWl.xZU[VWl.gCJ(A)]=A
-		for B in range(0,128):VWl.ZNi.append(-1)
-		VWl.Sod(ssB.inO,Xiz.JnR);VWl.Sod(ssB.OMZ,Xiz.Lwg);VWl.Sod(ssB.Xdm,Xiz.dHF);VWl.Sod(ssB.mmS,Xiz.dHF);VWl.Sod(ssB.vli,Xiz.dHF);VWl.Sod(ssB.VdX,Xiz.dHF);VWl.Sod(ssB.UFY,Xiz.Lwg);VWl.Sod(ssB.WHO,Xiz.Lwg);VWl.Sod(ssB.QUT,Xiz.Lwg);VWl.Sod(ssB.ERROR,Xiz.dHF);VWl.Sod(ssB.DXs,Xiz.Lwg);VWl.Sod(ssB.RiS,Xiz.dHF);VWl.Sod(ssB.VTl,Xiz.JnR);VWl.Sod(ssB.eAm,Xiz.JnR);VWl.Sod(ssB.zXS,Xiz.JnR);VWl.Sod(ssB.zSb,Xiz.dHF);VWl.Sod(ssB.ykt,Xiz.dHF);VWl.Sod(ssB.wsX,Xiz.dHF);VWl.Sod(ssB.lWK,Xiz.dHF);VWl.Sod(ssB.XBf,Xiz.JnR);VWl.Sod(ssB.LSA,Xiz.JnR);VWl.Sod(ssB.GzR,Xiz.JnR);VWl.Sod(ssB.Vxz,Xiz.JnR);VWl.Sod(ssB.cxQ,Xiz.dHF);VWl.Sod(ssB.yQX,Xiz.dHF);VWl.Sod(ssB.ulT,Xiz.JnR);VWl.Sod(ssB.aOE,Xiz.dHF);VWl.Sod(ssB.fmO,Xiz.dHF);VWl.Sod(ssB.AKb,Xiz.JnR);VWl.Sod(ssB.DoJ,Xiz.dHF);VWl.Sod(ssB.obh,Xiz.dHF);VWl.Sod(ssB.UQb,Xiz.dHF);VWl.Sod(ssB.abu,Xiz.JnR);VWl.Sod(ssB.aMX,Xiz.dHF);VWl.Sod(ssB.PTc,Xiz.dHF)
-		for B in range(0,255):VWl.kFC.append(-1)
-		VWl.kFC[VWl.ciG]=1;VWl.kFC[VWl.FAa]=2;VWl.kFC[VWl.DHr]=3;VWl.kFC[Xyu.hsL]=4;VWl.kFC[Xyu.Ene]=5;VWl.kFC[Xyu.aUI]=6;VWl.kFC[Xyu.Uyd]=7;VWl.kFC[Xyu.Flr]=8;VWl.kFC[33]=9;VWl.kFC[VWl.ZAf]=11
-		for B in range(0,255):VWl.zXe.append(-1)
+	def anh():
+		for B in range(0,128):rCj.wGL.append(-1)
+		rCj.wGL[Eid.eEO]=1;rCj.wGL[Eid.Nab]=2;rCj.wGL[Eid.QaI]=3;rCj.wGL[Eid.RXp]=4;rCj.wGL[Eid.Fcd]=5;rCj.wGL[Eid.Esx]=6;rCj.wGL[Eid.zOj]=8;rCj.wGL[Eid.rNl]=9;rCj.wGL[Eid.Zsx]=12;rCj.wGL[Eid.mav]=16;rCj.wGL[Eid.CLIENT_PUBLISH_RESPONSE]=19;rCj.wGL[Eid.MSM]=26;rCj.wGL[Eid.GgP]=7;rCj.wGL[Eid.sAy]=11
+		for B in range(0,128):rCj.HhG.append(-1)
+		for A in range(0,Eid.sAy+1):rCj.HhG[rCj.wKa(A)]=A
+		for B in range(0,128):rCj.hgC.append(-1)
+		rCj.hgC[LuJ.Piu]=1;rCj.hgC[LuJ.rLN]=2;rCj.hgC[LuJ.NEo]=3;rCj.hgC[LuJ.vbm]=4;rCj.hgC[LuJ.ukk]=5;rCj.hgC[LuJ.kFg]=6;rCj.hgC[LuJ.ktF]=7;rCj.hgC[LuJ.lET]=8;rCj.hgC[LuJ.CsK]=9;rCj.hgC[LuJ.ERROR]=11;rCj.hgC[LuJ.Uon]=12;rCj.hgC[LuJ.VHU]=15;rCj.hgC[LuJ.vDS]=16;rCj.hgC[LuJ.HDn]=17;rCj.hgC[LuJ.ILu]=18;rCj.hgC[LuJ.meQ]=19;rCj.hgC[LuJ.obu]=20;rCj.hgC[LuJ.nUz]=21;rCj.hgC[LuJ.GYq]=22;rCj.hgC[LuJ.sBx]=23;rCj.hgC[LuJ.qHM]=24;rCj.hgC[LuJ.JfC]=26;rCj.hgC[LuJ.QvE]=32;rCj.hgC[LuJ.dOe]=39;rCj.hgC[LuJ.mAm]=40;rCj.hgC[LuJ.FLQ]=35;rCj.hgC[LuJ.kQl]=36;rCj.hgC[LuJ.GnM]=37;rCj.hgC[LuJ.ijN]=44;rCj.hgC[LuJ.lEu]=45;rCj.hgC[LuJ.qeL]=46;rCj.hgC[LuJ.zZt]=47;rCj.hgC[LuJ.ueP]=48;rCj.hgC[LuJ.LEM]=29;rCj.hgC[LuJ.vGY]=38
+		for B in range(0,128):rCj.wst.append(-1)
+		for A in range(0,LuJ.vGY+1):rCj.wst[rCj.KRN(A)]=A
+		for B in range(0,128):rCj.mct.append(-1)
+		rCj.Gtq(LuJ.Piu,UxH.gBo);rCj.Gtq(LuJ.rLN,UxH.Rld);rCj.Gtq(LuJ.NEo,UxH.UOC);rCj.Gtq(LuJ.vbm,UxH.UOC);rCj.Gtq(LuJ.ukk,UxH.UOC);rCj.Gtq(LuJ.kFg,UxH.UOC);rCj.Gtq(LuJ.ktF,UxH.Rld);rCj.Gtq(LuJ.lET,UxH.Rld);rCj.Gtq(LuJ.CsK,UxH.Rld);rCj.Gtq(LuJ.ERROR,UxH.UOC);rCj.Gtq(LuJ.Uon,UxH.Rld);rCj.Gtq(LuJ.VHU,UxH.UOC);rCj.Gtq(LuJ.ILu,UxH.gBo);rCj.Gtq(LuJ.meQ,UxH.gBo);rCj.Gtq(LuJ.obu,UxH.gBo);rCj.Gtq(LuJ.nUz,UxH.UOC);rCj.Gtq(LuJ.GYq,UxH.UOC);rCj.Gtq(LuJ.sBx,UxH.UOC);rCj.Gtq(LuJ.qHM,UxH.UOC);rCj.Gtq(LuJ.JfC,UxH.gBo);rCj.Gtq(LuJ.QvE,UxH.gBo);rCj.Gtq(LuJ.dOe,UxH.gBo);rCj.Gtq(LuJ.FLQ,UxH.gBo);rCj.Gtq(LuJ.kQl,UxH.UOC);rCj.Gtq(LuJ.GnM,UxH.UOC);rCj.Gtq(LuJ.vDS,UxH.gBo);rCj.Gtq(LuJ.HDn,UxH.UOC);rCj.Gtq(LuJ.mAm,UxH.UOC);rCj.Gtq(LuJ.ijN,UxH.gBo);rCj.Gtq(LuJ.lEu,UxH.UOC);rCj.Gtq(LuJ.qeL,UxH.UOC);rCj.Gtq(LuJ.zZt,UxH.UOC);rCj.Gtq(LuJ.ueP,UxH.gBo);rCj.Gtq(LuJ.LEM,UxH.UOC);rCj.Gtq(LuJ.vGY,UxH.UOC)
+		for B in range(0,255):rCj.flN.append(-1)
+		rCj.flN[rCj.czT]=1;rCj.flN[rCj.CUW]=2;rCj.flN[rCj.Jik]=3;rCj.flN[qky.HGN]=4;rCj.flN[qky.ZhY]=5;rCj.flN[qky.iKU]=6;rCj.flN[qky.oAe]=7;rCj.flN[qky.jCn]=8;rCj.flN[33]=9;rCj.flN[rCj.ibi]=11
+		for B in range(0,255):rCj.BAv.append(-1)
 		for A in range(0,128):
-			C=VWl.doN(A)
-			if C!=-1:VWl.zXe[C]=A
+			C=rCj.cwG(A)
+			if C!=-1:rCj.BAv[C]=A
 	@staticmethod
-	def Sod(Mlk,hdr_type):VWl.ZNi[VWl.gCJ(Mlk)]=hdr_type
+	def Gtq(YOy,hdr_type):rCj.mct[rCj.KRN(YOy)]=hdr_type
 	@staticmethod
-	def mSp(LDT):
-		A=VWl.wpV(LDT);G=0
+	def aGX(rcJ):
+		A=rCj.MYl(rcJ);G=0
 		for B in range(0,len(A)):
-			F=VWl.doN(A[B])
+			F=rCj.cwG(A[B])
 			if F!=-1:G+=1
 		if G==0:C=bytearray();C.extend(bytes(A));return C
 		D=[]
 		for H in range(0,len(A)+G):D.append(0)
 		B=0;E=0
 		while B<len(A):
-			F=VWl.doN(A[B])
-			if F!=-1:D[E]=VWl.DHr;D[E+1]=F;E+=1
+			F=rCj.cwG(A[B])
+			if F!=-1:D[E]=rCj.Jik;D[E+1]=F;E+=1
 			else:D[E]=A[B]
 			B+=1;E+=1
 		C=bytearray();C.extend(bytes(D));return C
 	@staticmethod
-	def GXg(PcK):
-		A=PcK;F=0
+	def UJO(USS):
+		A=USS;F=0
 		for B in range(0,len(A)):
-			E=VWl.doN(A[B])
+			E=rCj.cwG(A[B])
 			if E!=-1:F+=1
 		if F==0:return A
 		C=[]
 		for H in range(0,len(A)+F):C.append(0)
 		B=0;D=0
 		while B<len(A):
-			E=VWl.doN(A[B])
-			if E!=-1:C[D]=VWl.DHr;C[D+1]=E;D+=1
+			E=rCj.cwG(A[B])
+			if E!=-1:C[D]=rCj.Jik;C[D+1]=E;D+=1
 			else:C[D]=A[B]
 			B+=1;D+=1
 		G=bytearray();G.extend(bytes(C));return G
 	@staticmethod
-	def TFM(LDT):
-		E=LDT;A=list(struct.unpack(len(E)*'B',E));F=0
+	def VhM(rcJ):
+		E=rcJ;A=list(struct.unpack(len(E)*'B',E));F=0
 		if len(A)==0:return E
 		for B in range(0,len(A)):
-			if A[B]==VWl.DHr:F+=1
+			if A[B]==rCj.Jik:F+=1
 		C=[]
 		for I in range(0,len(A)-F):C.append(0)
 		B=0;D=0
 		while B<len(A):
 			G=A[B]
-			if G==VWl.DHr:
+			if G==rCj.Jik:
 				if B+1<len(A):
-					C[D]=VWl.nyn(A[B+1])
+					C[D]=rCj.bJD(A[B+1])
 					if C[D]==-1:raise ValueError()
 					B+=1
 				else:raise ValueError()
@@ -74,28 +74,28 @@ class VWl:
 			B+=1;D+=1
 		H=bytearray();H.extend(bytes(C));return H
 	@staticmethod
-	def Dqp(LDT,_headerId,_headerType):
-		D=LDT;B=_headerType;A=None;E=D.find(chr(VWl.gCJ(_headerId)));F=D.find(chr(VWl.FAa),E)
+	def PRQ(rcJ,_headerId,_headerType):
+		D=rcJ;B=_headerType;A=None;E=D.find(chr(rCj.KRN(_headerId)));F=D.find(chr(rCj.CUW),E)
 		if E!=-1 and F!=-1:
 			C=D[E+1:F]
-			if B==Xiz.gLu:A=C
-			elif B==Xiz.Lwg:A=C
-			elif B==Xiz.JnR:A=C
-			elif B==Xiz.dHF:A=VWl.kfG(C)
+			if B==UxH.shb:A=C
+			elif B==UxH.Rld:A=C
+			elif B==UxH.gBo:A=C
+			elif B==UxH.UOC:A=rCj.vzf(C)
 		return A
 	@staticmethod
-	def kfG(_dataString):
+	def vzf(_dataString):
 		I=_dataString;B=list(struct.unpack(len(I)*'B',I));H=0;C=-1;D=0;E=len(B);F=0
 		if E==1:return B[0]
-		elif E==2 and B[F]==VWl.DHr:
-			A=VWl.nyn(B[F+1])
+		elif E==2 and B[F]==rCj.Jik:
+			A=rCj.bJD(B[F+1])
 			if A!=-1:return A
 			else:raise ValueError()
 		while E>0:
 			A=B[F];F+=1
-			if A==VWl.DHr:
+			if A==rCj.Jik:
 				if E-1<0:raise ValueError()
-				E-=1;A=B[F];F+=1;G=VWl.nyn(A)
+				E-=1;A=B[F];F+=1;G=rCj.bJD(A)
 				if G==-1:raise ValueError()
 			else:G=A
 			if C>0:D|=G>>C;H=H<<8|(D if D>=0 else D+256);D=G<<8-C
@@ -103,12 +103,12 @@ class VWl:
 			C=(C+7)%8;E-=1
 		return H
 	@staticmethod
-	def auC(_val):
+	def rSl(_val):
 		C=_val
 		if int(C)&4294967168==0:
-			G=VWl.doN(C)
+			G=rCj.cwG(C)
 			if G==-1:return struct.pack('B',C)
-			else:return struct.pack('BB',VWl.DHr,G)
+			else:return struct.pack('BB',rCj.Jik,G)
 		D=0
 		if int(C)&4278190080!=0:D=24
 		elif int(C)&16711680!=0:D=16
@@ -117,40 +117,40 @@ class VWl:
 		for G in range(0,10):B.append(0)
 		A=0;H=0
 		while D>=0:
-			F=int(C)>>D&255;H+=1;B[A]|=(F if F>=0 else F+256)>>H;E=VWl.doN(B[A])
-			if E!=-1:B[A]=VWl.DHr;B[A+1]=E;A+=1
+			F=int(C)>>D&255;H+=1;B[A]|=(F if F>=0 else F+256)>>H;E=rCj.cwG(B[A])
+			if E!=-1:B[A]=rCj.Jik;B[A+1]=E;A+=1
 			A+=1;B[A]|=F<<7-H&127;D-=8
-		E=VWl.doN(B[A])
-		if E!=-1:B[A]=VWl.DHr;B[A+1]=E;A+=1
+		E=rCj.cwG(B[A])
+		if E!=-1:B[A]=rCj.Jik;B[A+1]=E;A+=1
 		A+=1
 		if A<len(B):B=B[0:A]
 		I=bytearray();I.extend(bytes(B));return I
 	@staticmethod
-	def nyn(b):
-		if b>=0:return VWl.zXe[int(b)]
+	def bJD(b):
+		if b>=0:return rCj.BAv[int(b)]
 		else:return-1
 	@staticmethod
-	def doN(b):
-		if b>=0:return VWl.kFC[int(b)]
+	def cwG(b):
+		if b>=0:return rCj.flN[int(b)]
 		else:return-1
 	@staticmethod
-	def gCJ(h):return VWl.OdB[int(h)]
+	def KRN(h):return rCj.hgC[int(h)]
 	@staticmethod
-	def kNt(o):return VWl.zHz[int(o)]
+	def wKa(o):return rCj.wGL[int(o)]
 	@staticmethod
-	def Paj(Mlk):A=VWl.gCJ(Mlk);return VWl.ZNi[A]
+	def nND(YOy):A=rCj.KRN(YOy);return rCj.mct[A]
 	@staticmethod
-	def wpV(str_value):A=str_value.encode('utf-8');return list(struct.unpack(len(A)*'B',A))
+	def MYl(str_value):A=str_value.encode('utf-8');return list(struct.unpack(len(A)*'B',A))
 	@staticmethod
-	def NHk(b):
+	def Jyr(b):
 		if b<0:return None
-		return VWl.xZU[b]
-class yZW:aoD=0;Apn=1;TTE=2;EOC=3;XZj=4;ClT=5;Qlz=6;oWs=7;FRc=8;beJ=9;CLIENT_PUBLISH_RESPONSE=10;wFt=11;BCa=12;KZZ=13
-class ssB:inO=0;OMZ=1;Xdm=2;mmS=3;vli=4;VdX=5;UFY=6;WHO=7;QUT=8;ERROR=9;DXs=10;RiS=11;VTl=12;eAm=13;zXS=14;zSb=15;ykt=16;wsX=17;lWK=18;XBf=19;LSA=20;GzR=21;Vxz=22;cxQ=23;yQX=24;ulT=25;aOE=26;fmO=27;AKb=28;DoJ=29;obh=30;UQb=31;abu=32;aMX=33;PTc=34
-class Xiz:gLu=0;Lwg=1;JnR=2;dHF=3
-class Xyu:hsL=0;Uyd=34;Ene=10;aUI=13;Flr=92
-class UkE:CNU=1;QBs=2;xiQ=3;PAG=4
-class XAE:xsd=0;EDw=1;BoY=2;InT=3;mSN=4;MEf=5;Txg=6;tjT=7;vKL=8
-class qae:SNAPSHOT='1';UPDATE='2';RECOVERED='3';HISTORICAL='4'
-class IEf:WFt='d';rSG='a'
-VWl.oIC()
+		return rCj.wst[b]
+class Eid:eEO=0;Nab=1;QaI=2;RXp=3;Fcd=4;Esx=5;zOj=6;rNl=7;Zsx=8;mav=9;CLIENT_PUBLISH_RESPONSE=10;MSM=11;GgP=12;sAy=13
+class LuJ:Piu=0;rLN=1;NEo=2;vbm=3;ukk=4;kFg=5;ktF=6;lET=7;CsK=8;ERROR=9;Uon=10;VHU=11;ILu=12;meQ=13;obu=14;nUz=15;GYq=16;sBx=17;qHM=18;JfC=19;QvE=20;dOe=21;FLQ=22;kQl=23;GnM=24;vDS=25;HDn=26;mAm=27;ijN=28;lEu=29;qeL=30;zZt=31;ueP=32;LEM=33;vGY=34
+class UxH:shb=0;Rld=1;gBo=2;UOC=3
+class qky:HGN=0;oAe=34;ZhY=10;iKU=13;jCn=92
+class AMZ:ceW=1;lif=2;DuS=3;KmS=4
+class sIx:AjK=0;sRS=1;Zyt=2;coO=3;PFC=4;ZnI=5;VLs=6;DkJ=7;fUk=8
+class Edk:SNAPSHOT='1';UPDATE='2';RECOVERED='3';HISTORICAL='4'
+class bYU:YDR='d';YfS='a'
+rCj.anh()

@@ -1,11 +1,11 @@
 from ..migratorydata_client import MigratoryDataLogListener,MigratoryDataLogLevel as LL
-class Jnf:
+class yMm:
 	def trace(A,message):0
 	def debug(A,message):0
 	def info(A,message):0
 	def warn(A,message):0
 	def error(A,message):0
-class CWY(MigratoryDataLogListener):
+class NxQ(MigratoryDataLogListener):
 	def on_log(C,log,ll):
 		B=ll;A=log
 		if B==LL.TRACE:print(A)
@@ -13,9 +13,9 @@ class CWY(MigratoryDataLogListener):
 		elif B==LL.INFO:print(A)
 		elif B==LL.WARN:print(A)
 		elif B==LL.ERROR:print(A)
-class imS(Jnf):
-	def __init__(A):A._list=CWY();A._ll=LL.INFO
-	def OXT(A,log_listener,log_level):A._list=log_listener;A._ll=log_level
+class glw(yMm):
+	def __init__(A):A._list=NxQ();A._ll=LL.INFO
+	def yqr(A,log_listener,log_level):A._list=log_listener;A._ll=log_level
 	def error(A,message):
 		if A._ll<=LL.ERROR:A._list.on_log(message,LL.ERROR)
 	def trace(A,message):
